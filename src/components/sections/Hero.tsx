@@ -31,11 +31,11 @@ export function Hero() {
       <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-hz-teal/[0.04] rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-[350px] h-[350px] bg-hz-teal/[0.03] rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 lg:gap-20 items-center py-10">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-20 items-center py-6 sm:py-10">
         {/* Left: Copy */}
         <div>
           <MotionSection variant={blurIn} delay={0.1}>
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 border border-hz-teal/30 rounded-full bg-hz-teal/5 mb-10">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 border border-hz-teal/30 rounded-full bg-hz-teal/5 mb-6 sm:mb-10">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-hz-teal opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-hz-teal" />
@@ -47,24 +47,24 @@ export function Hero() {
           </MotionSection>
 
           <MotionSection delay={0.2}>
-            <h1 className="font-sora text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-extrabold leading-[1.1] mb-6 tracking-tight text-hz-text">
+            <h1 className="font-sora text-[1.7rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-extrabold leading-[1.1] mb-5 tracking-tight text-hz-text">
               Senior-Led Engineering for{" "}
               <span className="text-hz-teal">Ambitious Tech Teams</span>
             </h1>
           </MotionSection>
 
           <MotionSection delay={0.35}>
-            <p className="text-base text-slate-400 mb-10 max-w-lg leading-[1.7]">
+            <p className="text-sm sm:text-base text-slate-400 mb-8 max-w-lg leading-[1.7]">
               We build production-grade web, mobile, and automation systems for
               ambitious software companies worldwide.
             </p>
           </MotionSection>
 
           <MotionSection delay={0.5}>
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
               <Link
                 href="/pilot"
-                className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-sm uppercase tracking-widest text-center"
+                className="group relative bg-hz-teal text-hz-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-sm uppercase tracking-widest text-center"
               >
                 <span className="relative z-10">Start 2-Week Discovery Sprint</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
@@ -73,7 +73,7 @@ export function Hero() {
                 href="https://calendly.com/hizbullah3698/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-transparent border border-white/15 text-hz-text hover:border-hz-teal/50 hover:bg-hz-teal/5 px-8 py-4 rounded-sm font-bold transition-all duration-300 text-sm uppercase tracking-widest text-center"
+                className="bg-transparent border border-white/15 text-hz-text hover:border-hz-teal/50 hover:bg-hz-teal/5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-sm font-bold transition-all duration-300 text-sm uppercase tracking-widest text-center"
               >
                 Book a Technical Call
               </a>
@@ -81,7 +81,7 @@ export function Hero() {
           </MotionSection>
 
           <MotionSection variant={fadeIn} delay={0.65}>
-            <div className="flex flex-wrap gap-5 font-mono text-[10px] text-slate-500 uppercase tracking-[0.15em]">
+            <div className="flex flex-wrap gap-3 sm:gap-5 font-mono text-[10px] text-slate-500 uppercase tracking-[0.15em]">
               {["NDA-Ready in 24hrs", "Gulf Timezone Aligned", "Senior Engineers Only"].map(
                 (item, i) => (
                   <span key={i} className="flex items-center gap-2">
