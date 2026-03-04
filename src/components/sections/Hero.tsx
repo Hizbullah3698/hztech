@@ -15,7 +15,7 @@ import {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center pt-12 pb-16 overflow-hidden border-b border-white/5 bg-hz-primary">
+    <section className="relative min-h-[80vh] flex items-center justify-center pb-12 overflow-hidden border-b border-white/5 bg-hz-primary">
       {/* Static dot grid — no scroll listener, no jank */}
       <div
         className="absolute inset-0 z-0 opacity-[0.06] pointer-events-none"

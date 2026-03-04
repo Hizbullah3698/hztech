@@ -14,8 +14,8 @@ export function ServiceList() {
                                 <ArrowRight className="w-6 h-6 text-hz-teal" />
                             </div>
                         </div>
-                        <div className="max-w-7xl mx-auto px-6">
-                            <div className="flex flex-col lg:flex-row gap-12 lg:items-start lg:pr-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                            <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 lg:items-start lg:pr-16">
 
                                 {/* Left Column (Icon, Title, Desc, Tags) */}
                                 <div className="lg:w-1/3">

@@ -2,24 +2,19 @@ import Link from "next/link";
 
 export function PilotHero() {
     return (
-        <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-20 border-b border-white/5">
+        <section className="relative overflow-hidden pt-8 sm:pt-12 lg:pt-20 pb-12 lg:pb-20 border-b border-white/5">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(10,191,188,0.08),transparent_50%)]"></div>
-            <div className="mx-auto max-w-7xl px-6 relative z-10">
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+                <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-2 lg:items-center">
                     <div className="flex flex-col gap-6">
                         <span className="font-mono inline-block text-hz-teal font-bold tracking-[0.2em] text-xs uppercase">
                             Pilot Program v1.0
                         </span>
-                        <h1 className="font-sora text-4xl md:text-5xl font-extrabold leading-[1.1] text-hz-text">
-                            2-Week Paid <br />
-                            <span className="text-hz-teal relative inline-block">
-                                Discovery Sprint
-                                <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
-                                    <path d="M2 8c50-6 100-6 150 0s100 6 146 0" stroke="#0ABFBC" strokeWidth="3" strokeLinecap="round" opacity="0.4" />
-                                </svg>
-                            </span>
+                        <h1 className="font-sora text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.1] text-hz-text">
+                            2-Week Paid <br className="hidden sm:block" />
+                            <span className="text-hz-teal">Discovery Sprint</span>
                         </h1>
-                        <p className="max-w-xl text-xl text-slate-400 leading-relaxed mb-4">
+                        <p className="max-w-xl text-base md:text-lg text-slate-400 leading-relaxed mb-4">
                             The lowest-risk way to evaluate HZ Tech as your long-term technology
                             partner. A high-velocity engagement designed to de-risk your
                             roadmap.
@@ -45,7 +40,7 @@ export function PilotHero() {
                             </Link>
                         </div>
                     </div>
-                    <div className="relative aspect-video overflow-hidden rounded-sm border border-hz-border bg-hz-primary shadow-2xl">
+                    <div className="hidden lg:block relative aspect-video overflow-hidden rounded-sm border border-hz-border bg-hz-primary shadow-2xl">
                         <div className="absolute top-0 flex w-full items-center gap-1.5 border-b border-hz-border bg-white/5 px-4 py-2">
                             <div className="h-2 w-2 rounded-full bg-red-500/50"></div>
                             <div className="h-2 w-2 rounded-full bg-yellow-500/50"></div>

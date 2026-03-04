@@ -3,9 +3,30 @@
 import { MotionSection, MotionStagger, MotionItem, blurIn } from "@/components/ui/Motion";
 import {
     Database, Server, Cpu, Cloud, Layers, TerminalSquare,
-    Box, Component, Smartphone, Code2, GitBranch, Shield
+    Box, Component, Smartphone, Code2, GitBranch, Shield, RefreshCw
 } from 'lucide-react';
 
+// Full flat list — used for mobile scroll strip
+const allTech = [
+    { name: "Next.js", icon: <Layers className="w-3.5 h-3.5" /> },
+    { name: "React", icon: <Component className="w-3.5 h-3.5" /> },
+    { name: "TypeScript", icon: <TerminalSquare className="w-3.5 h-3.5" /> },
+    { name: "Tailwind CSS", icon: <Code2 className="w-3.5 h-3.5" /> },
+    { name: "Node.js", icon: <Server className="w-3.5 h-3.5" /> },
+    { name: "NestJS", icon: <Code2 className="w-3.5 h-3.5" /> },
+    { name: "PostgreSQL", icon: <Database className="w-3.5 h-3.5" /> },
+    { name: "GraphQL", icon: <GitBranch className="w-3.5 h-3.5" /> },
+    { name: "Flutter", icon: <Smartphone className="w-3.5 h-3.5" /> },
+    { name: "React Native", icon: <Component className="w-3.5 h-3.5" /> },
+    { name: "Firebase", icon: <Cpu className="w-3.5 h-3.5" /> },
+    { name: "AWS", icon: <Cloud className="w-3.5 h-3.5" /> },
+    { name: "Docker", icon: <Box className="w-3.5 h-3.5" /> },
+    { name: "Redis", icon: <Cpu className="w-3.5 h-3.5" /> },
+    { name: "CI / CD", icon: <GitBranch className="w-3.5 h-3.5" /> },
+    { name: "REST APIs", icon: <Shield className="w-3.5 h-3.5" /> },
+];
+
+// Categorized — used for desktop grid
 const categories = [
     {
         label: "Frontend",
@@ -62,7 +83,7 @@ export function BuiltWith() {
         <section className="py-14 px-6 max-w-7xl mx-auto border-t border-hz-border/40">
             {/* Header */}
             <MotionSection variant={blurIn}>
-                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
                     <div>
                         <span className="text-hz-teal text-[10px] font-bold tracking-[0.3em] font-mono uppercase mb-3 block">
                             Our Arsenal
@@ -72,34 +93,54 @@ export function BuiltWith() {
                         </h2>
                     </div>
                     {/* Agile badge */}
-                    <div className="flex-shrink-0 flex items-center gap-2.5 px-4 py-2 rounded-lg border border-hz-teal/25 bg-hz-teal/5">
-                        <div className="w-1.5 h-1.5 rounded-full bg-hz-teal animate-pulse" />
-                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-hz-teal font-bold whitespace-nowrap">
+                    <div className="flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-lg border border-hz-teal/25 bg-hz-teal/5 self-start sm:self-auto">
+                        <RefreshCw className="w-3 h-3 text-hz-teal" />
+                        <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-hz-teal font-bold whitespace-nowrap">
                             Agile · 1-Week Sprints
                         </span>
                     </div>
                 </div>
             </MotionSection>
 
-            {/* Category cards grid */}
-            <MotionStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* ── MOBILE: horizontal scroll strip (same style as TrustedBy) ── */}
+            <div className="md:hidden relative">
+                {/* Fade edges */}
+                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-hz-primary to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-hz-primary to-transparent z-10 pointer-events-none" />
+
+                <div className="overflow-hidden">
+                    <div className="flex animate-scroll-x gap-3 pr-3" style={{ width: "max-content" }}>
+                        {[...allTech, ...allTech].map((tech, i) => (
+                            <div
+                                key={i}
+                                className="flex items-center gap-2 shrink-0 px-3.5 py-2.5 rounded-md border border-hz-border/60 bg-hz-card/20"
+                            >
+                                <span className="text-hz-teal/70">{tech.icon}</span>
+                                <span className="font-mono text-[11px] font-medium text-hz-text/75 whitespace-nowrap">
+                                    {tech.name}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* ── DESKTOP: categorized 4-column grid ── */}
+            <MotionStagger className="hidden md:grid md:grid-cols-4 gap-4">
                 {categories.map((cat, ci) => (
                     <MotionItem key={ci}>
                         <div className={`relative rounded-xl border ${cat.border} bg-hz-card/20 overflow-hidden p-5 hover:bg-hz-card/40 transition-all duration-300 group h-full`}>
-                            {/* Category gradient accent */}
+                            {/* Top accent bar */}
                             <div className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${cat.color}`} />
                             <div className={`absolute inset-0 bg-gradient-to-b ${cat.color} opacity-30 pointer-events-none`} />
 
                             <div className="relative">
-                                {/* Category header */}
                                 <div className="flex items-center gap-2 mb-4">
                                     <div className={`w-1.5 h-1.5 rounded-full ${cat.dot}`} />
                                     <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-hz-muted/80 font-semibold">
                                         {cat.label}
                                     </p>
                                 </div>
-
-                                {/* Tech items */}
                                 <div className="flex flex-col gap-1.5">
                                     {cat.items.map((tech) => (
                                         <div

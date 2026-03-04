@@ -3,9 +3,9 @@ import { Mail, MessageCircle, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-hz-border bg-hz-primary py-20 px-6">
+    <footer className="border-t border-hz-border bg-hz-primary py-10 sm:py-14 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 mb-10">
           <div className="col-span-1 sm:col-span-2 lg:col-span-1">
             <div className="font-sora text-2xl font-extrabold text-hz-text mb-6">
               <span className="text-hz-teal">HZ</span> Tech
