@@ -39,7 +39,7 @@ export function PilotOffer() {
 
                 <Link
                   href="/pilot"
-                  className="inline-flex bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all items-center gap-3 group/btn relative overflow-hidden hover:shadow-[0_0_30px_rgba(10,191,188,0.3)]"
+                  className="inline-flex bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all items-center gap-3 group/btn relative overflow-hidden hover:shadow-[0_0_30px_rgba(10,191,188,0.3)] text-sm uppercase tracking-widest"
                 >
                   <span className="relative z-10">Secure Your Sprint Slot</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform relative z-10" />

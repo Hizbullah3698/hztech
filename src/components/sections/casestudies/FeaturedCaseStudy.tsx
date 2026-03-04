@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+
 export function FeaturedCaseStudy() {
     return (
         <section className="py-10 bg-hz-primary">
@@ -84,9 +86,9 @@ export function FeaturedCaseStudy() {
                             </div>
                         </div>
 
-                        <button className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold flex items-center justify-center transition-all active:scale-[0.98] overflow-hidden text-lg w-fit">
-                            <span className="relative z-10 flex items-center gap-2">
-                                Read Full Case Study
+                        <button className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold flex items-center justify-center transition-all active:scale-[0.98] overflow-hidden text-sm w-fit">
+                            <span className="relative z-10 flex items-center gap-3">
+                                Read Full Case Study <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </span>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                         </button>

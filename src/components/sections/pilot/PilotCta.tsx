@@ -17,17 +17,19 @@ export function PilotCta() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
                         href="/contact"
-                        className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-lg"
+                        className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-sm"
                     >
-                        <span className="relative z-10">Secure Your Sprint Slot</span>
+                        <span className="relative z-10 w-full text-center">Book Your Free Audit Call</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                     </Link>
-                    <Link
-                        href="/contact"
-                        className="bg-transparent border border-white/15 text-hz-text hover:border-hz-teal/50 hover:bg-hz-teal/5 px-8 py-4 rounded-sm font-bold transition-all duration-300 text-lg"
+                    <a
+                        href="https://calendly.com/hizbullah3698/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-transparent border border-white/15 text-hz-text hover:border-hz-teal/50 hover:bg-hz-teal/5 px-8 py-4 rounded-sm font-bold transition-all duration-300 text-sm text-center"
                     >
                         Book a Call First
-                    </Link>
+                    </a>
                 </div>
             </div>
         </section>

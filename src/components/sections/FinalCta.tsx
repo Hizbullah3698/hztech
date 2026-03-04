@@ -42,7 +42,7 @@ export function FinalCta() {
               <div className="flex flex-col sm:flex-row justify-center gap-5">
                 <Link
                   href="/contact"
-                  className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all text-lg overflow-hidden inline-flex items-center gap-3 justify-center hover:shadow-[0_0_30px_rgba(10,191,188,0.3)]"
+                  className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all text-sm overflow-hidden inline-flex items-center gap-3 justify-center hover:shadow-[0_0_30px_rgba(10,191,188,0.3)]"
                 >
                   <span className="relative z-10">Start a Project</span>
                   <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -50,7 +50,7 @@ export function FinalCta() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-hz-text px-8 py-4 rounded-sm font-bold transition-all text-lg"
+                  className="bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-hz-text px-8 py-4 rounded-sm font-bold transition-all text-sm flex items-center justify-center"
                 >
                   Contact Us
                 </Link>

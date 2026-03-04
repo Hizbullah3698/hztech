@@ -141,9 +141,9 @@ export function ContactForm() {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="group relative w-full bg-hz-teal text-hz-primary py-4 rounded-sm font-bold flex items-center justify-center transition-all disabled:opacity-70 disabled:cursor-not-allowed active:scale-[0.98] overflow-hidden text-lg"
+                        className="group relative w-full bg-hz-teal text-hz-primary py-4 rounded-sm font-bold flex items-center justify-center transition-all disabled:opacity-70 disabled:cursor-not-allowed active:scale-[0.98] overflow-hidden text-sm tracking-[0.2em] uppercase"
                     >
-                        <span className="relative z-10 flex items-center gap-2">
+                        <span className="relative z-10 flex items-center gap-3">
                             {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </span>

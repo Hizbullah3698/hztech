@@ -83,7 +83,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
                 href="/pilot"
-                className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden"
+                className="group relative bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-sm uppercase tracking-widest text-center"
               >
                 <span className="relative z-10">Start 2-Week Discovery Sprint</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
@@ -92,7 +92,7 @@ export function Hero() {
                 href="https://calendly.com/hizbullah3698/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-transparent border border-white/15 text-hz-text hover:border-hz-teal/50 hover:bg-hz-teal/5 px-8 py-4 rounded-sm font-bold transition-all duration-300"
+                className="bg-transparent border border-white/15 text-hz-text hover:border-hz-teal/50 hover:bg-hz-teal/5 px-8 py-4 rounded-sm font-bold transition-all duration-300 text-sm uppercase tracking-widest text-center"
               >
                 Book a Technical Call
               </a>

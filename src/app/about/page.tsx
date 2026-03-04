@@ -26,7 +26,7 @@ export default function AboutPage() {
                     </h2>
                     <Link
                         href="/contact"
-                        className="group relative inline-flex items-center justify-center bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-lg"
+                        className="group relative inline-flex items-center justify-center bg-hz-teal text-hz-primary px-8 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-sm uppercase tracking-widest"
                     >
                         <span className="relative z-10">Start a Project</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />

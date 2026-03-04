@@ -113,7 +113,7 @@ export function CaseStudyDetails() {
                                     <button className="flex-1 group relative border border-hz-border hover:bg-white/5 text-hz-text px-6 py-4 rounded-sm font-bold uppercase tracking-widest text-xs transition-all font-mono text-center active:scale-[0.98] overflow-hidden">
                                         <span className="relative z-10 w-full text-center">Download PDF</span>
                                     </button>
-                                    <button className="flex-1 group relative bg-hz-teal text-hz-primary px-6 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-lg text-center">
+                                    <button className="flex-1 group relative bg-hz-teal text-hz-primary px-6 py-4 rounded-sm font-bold transition-all active:scale-[0.98] overflow-hidden text-xs uppercase tracking-widest text-center">
                                         <span className="relative z-10 w-full text-center">Discuss Project</span>
                                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                                     </button>

@@ -15,7 +15,7 @@ export function ProcessGovernance() {
                             </p>
                         </div>
                         <div className="flex-shrink-0">
-                            <button className="group relative bg-hz-teal/10 hover:bg-hz-teal border border-hz-teal text-hz-teal hover:text-hz-primary px-8 py-4 rounded-sm font-bold flex items-center gap-2 transition-all duration-300 shadow-[0_5px_15px_rgba(10,191,188,0.15)] active:scale-[0.98] overflow-hidden">
+                            <button className="group relative bg-hz-teal/10 hover:bg-hz-teal border border-hz-teal text-hz-teal hover:text-hz-primary px-8 py-4 rounded-sm font-bold flex items-center gap-2 transition-all duration-300 shadow-[0_5px_15px_rgba(10,191,188,0.15)] active:scale-[0.98] overflow-hidden text-sm uppercase tracking-widest">
                                 <span className="relative z-10 flex items-center gap-2">
                                     <FileText className="w-5 h-5" />
                                     Governance PDF
