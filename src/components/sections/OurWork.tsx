@@ -34,7 +34,7 @@ const caseStudies = [
 
 export function OurWork() {
   return (
-    <section className="py-14 px-6 max-w-7xl mx-auto border-t border-hz-border/40">
+    <section className="py-10 sm:py-14 px-4 sm:px-6 max-w-7xl mx-auto border-t border-hz-border/40">
       {/* Header */}
       <MotionSection className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
         <div>
@@ -57,7 +57,7 @@ export function OurWork() {
             <Link href={cs.href} className="block group h-full">
               <div className="h-full border border-hz-border rounded-xl overflow-hidden bg-hz-card/30 hover:border-hz-teal/30 transition-all duration-500 hover:shadow-[0_0_40px_rgba(10,191,188,0.07)] hover:-translate-y-1 flex flex-col">
                 {/* Image */}
-                <div className="relative h-44 overflow-hidden flex-shrink-0">
+                <div className="relative h-36 sm:h-44 overflow-hidden flex-shrink-0">
                   <Image
                     src={cs.image}
                     alt={cs.title}
@@ -74,7 +74,7 @@ export function OurWork() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-4 sm:p-6 flex flex-col flex-1">
                   <h3 className="font-sora text-base font-bold text-hz-text mb-2 leading-snug">
                     {cs.title}
                   </h3>

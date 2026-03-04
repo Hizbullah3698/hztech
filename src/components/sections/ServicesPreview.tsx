@@ -38,7 +38,7 @@ const services = [
 
 export function ServicesPreview() {
   return (
-    <section className="py-14 px-6 max-w-7xl mx-auto">
+    <section className="py-10 sm:py-14 px-4 sm:px-6 max-w-7xl mx-auto">
       {/* Section header */}
       <MotionSection className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
         <div>
@@ -78,12 +78,13 @@ export function ServicesPreview() {
                   Learn more <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
-              <div className="relative min-h-[220px] lg:min-h-0 overflow-hidden">
+              <div className="relative min-h-[180px] sm:min-h-[220px] lg:min-h-0 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-hz-teal/20 to-transparent z-10 pointer-events-none" />
                 <Image
                   src={services[0].image}
                   alt={services[0].title}
                   fill
+                  priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center opacity-60 group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -94,7 +95,7 @@ export function ServicesPreview() {
       </MotionSection>
 
       {/* 3 smaller cards */}
-      <MotionStagger className="grid md:grid-cols-3 gap-5">
+      <MotionStagger className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
         {services.slice(1).map((service, idx) => {
           const Icon = service.icon;
           return (

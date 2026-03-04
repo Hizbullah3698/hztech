@@ -29,7 +29,7 @@ const steps = [
 
 export function HowWeWork() {
   return (
-    <section className="py-14 px-6 max-w-7xl mx-auto border-t border-hz-border/40">
+    <section className="py-10 sm:py-14 px-4 sm:px-6 max-w-7xl mx-auto border-t border-hz-border/40">
       <MotionSection className="mb-10">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
           <div>

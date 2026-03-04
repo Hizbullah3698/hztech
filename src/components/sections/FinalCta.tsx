@@ -6,9 +6,9 @@ import { MotionSection, blurIn } from "@/components/ui/Motion";
 
 export function FinalCta() {
   return (
-    <section className="px-6 pb-16 pt-4 max-w-7xl mx-auto">
+    <section className="px-4 sm:px-6 pb-12 sm:pb-16 pt-4 max-w-7xl mx-auto">
       <MotionSection variant={blurIn}>
-        <div className="py-14 px-8 sm:px-14 bg-gradient-to-br from-[#0f1118] via-hz-primary to-[#0f1118] border border-hz-border text-center relative overflow-hidden rounded-xl">
+        <div className="py-10 sm:py-14 px-5 sm:px-10 bg-gradient-to-br from-[#0f1118] via-hz-primary to-[#0f1118] border border-hz-border text-center relative overflow-hidden rounded-xl">
           {/* Glows */}
           <div className="absolute top-0 right-0 w-72 h-72 bg-hz-teal/[0.06] rounded-full -translate-y-1/2 translate-x-1/3 blur-[90px] animate-pulse-slow pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-56 h-56 bg-hz-teal/[0.04] rounded-full translate-y-1/2 -translate-x-1/3 blur-[70px] animate-pulse-slow pointer-events-none" />

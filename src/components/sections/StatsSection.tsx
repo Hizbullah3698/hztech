@@ -94,8 +94,8 @@ export function StatsSection() {
     return (
         <section className="py-8 border-y border-hz-border bg-hz-card/20 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-hz-teal/[0.015] via-transparent to-hz-teal/[0.015] pointer-events-none" />
-            <div className="max-w-5xl mx-auto px-6 relative">
-                <MotionStagger className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-hz-border/40">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
+                <MotionStagger className="grid grid-cols-2 lg:grid-cols-4 gap-0">
                     {stats.map((stat, idx) => (
                         <MotionItem key={idx}>
                             <StatCard stat={stat} />

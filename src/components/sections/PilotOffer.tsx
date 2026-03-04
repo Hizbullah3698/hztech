@@ -13,18 +13,18 @@ const deliverables = [
 
 export function PilotOffer() {
   return (
-    <section className="py-14 px-6 max-w-7xl mx-auto border-t border-hz-border/40">
+    <section className="py-10 sm:py-14 px-4 sm:px-6 max-w-7xl mx-auto border-t border-hz-border/40">
       <MotionSection variant={blurIn}>
         {/* Teal left-border card */}
         <div className="relative rounded-xl border border-hz-border bg-hz-card/40 overflow-hidden pl-[3px]">
           {/* Left accent bar */}
           <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-hz-teal rounded-l-xl" />
 
-          <div className="p-8 md:p-10 relative overflow-hidden">
+          <div className="p-5 sm:p-7 md:p-10 relative overflow-hidden">
             {/* Subtle glow */}
             <div className="absolute top-0 right-0 w-72 h-72 bg-hz-teal/[0.025] rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl pointer-events-none" />
 
-            <div className="relative flex flex-col lg:flex-row items-start gap-10">
+            <div className="relative flex flex-col lg:flex-row items-start gap-6 lg:gap-10">
               {/* Left: copy */}
               <div className="flex-1 min-w-0">
                 <div className="inline-flex items-center gap-2 font-mono text-hz-teal text-[10px] uppercase tracking-[0.3em] mb-4">
