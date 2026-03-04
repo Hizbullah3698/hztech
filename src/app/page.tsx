@@ -10,8 +10,8 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "HZ Tech | Senior-Led Software Engineering for Ambitious Tech Teams",
-  description: "We build production-grade web, mobile, and automation systems for ambitious software companies worldwide. NDA-ready, timezone-flexible.",
+  title: "HZ Tech | Senior-Led Engineering for Ambitious Tech Teams",
+  description: "We build production-grade web, mobile, and automation systems for ambitious software companies worldwide. NDA-ready in 24hrs. Senior engineers on every project.",
 };
 
 export default function Home() {

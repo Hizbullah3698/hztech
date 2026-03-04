@@ -31,8 +31,8 @@ export const scaleIn: Variants = {
 };
 
 export const blurIn: Variants = {
-    hidden: { opacity: 0, filter: "blur(10px)" },
-    visible: { opacity: 1, filter: "blur(0px)" },
+    hidden: { opacity: 0, y: 16 },
+    visible: { opacity: 1, y: 0 },
 };
 
 export const slideUp: Variants = {
@@ -78,10 +78,10 @@ export function MotionSection({
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, amount: 0.05 }}
             variants={variant}
             transition={{
-                duration: 0.7,
+                duration: 0.6,
                 ease: [0.25, 0.4, 0.25, 1],
                 delay,
             }}
@@ -106,7 +106,7 @@ export function MotionStagger({
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, amount: 0.05 }}
             variants={staggerContainer}
             className={className}
         >

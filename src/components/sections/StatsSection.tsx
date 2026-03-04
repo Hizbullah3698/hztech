@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
-import { MotionSection, MotionStagger, MotionItem, fadeUp, blurIn } from "@/components/ui/Motion";
+import { useEffect, useState, useRef } from "react";
+import { MotionSection, MotionStagger, MotionItem, blurIn } from "@/components/ui/Motion";
 
-function useCountUp(target: number, duration: number = 2000) {
+function useCountUp(target: number, duration: number = 1600) {
     const [count, setCount] = useState(0);
     const [started, setStarted] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
@@ -15,9 +15,8 @@ function useCountUp(target: number, duration: number = 2000) {
                     setStarted(true);
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.3 }
         );
-
         if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();
     }, [started]);
@@ -25,21 +24,14 @@ function useCountUp(target: number, duration: number = 2000) {
     useEffect(() => {
         if (!started) return;
         const startTime = performance.now();
-
         function animate(currentTime: number) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            // Ease-out cubic for smooth deceleration
             const eased = 1 - Math.pow(1 - progress, 3);
             setCount(Math.floor(eased * target));
-
-            if (progress < 1) {
-                requestAnimationFrame(animate);
-            } else {
-                setCount(target);
-            }
+            if (progress < 1) requestAnimationFrame(animate);
+            else setCount(target);
         }
-
         requestAnimationFrame(animate);
     }, [started, target, duration]);
 
@@ -47,29 +39,52 @@ function useCountUp(target: number, duration: number = 2000) {
 }
 
 const stats = [
-    { value: 4, suffix: "+", label: "Years Delivering", sublabel: "Commercial software" },
-    { value: 25, suffix: "+", label: "Projects Shipped", sublabel: "Production-grade" },
-    { value: 99, suffix: "%", label: "Client Retention", sublabel: "Long-term partners" },
-    { value: 3, suffix: "+", label: "Timezone Windows", sublabel: "Global coverage" },
+    {
+        value: 4,
+        suffix: "+",
+        label: "Years Delivering",
+        sublabel: "Commercial software",
+        description: "Consistent commercial delivery since founding"
+    },
+    {
+        value: 25,
+        suffix: "+",
+        label: "Projects Shipped",
+        sublabel: "Production-grade",
+        description: "From MVPs to enterprise-scale platforms"
+    },
+    {
+        value: 99,
+        suffix: "%",
+        label: "Client Retention",
+        sublabel: "Long-term partners",
+        description: "Clients who return for follow-on engagements"
+    },
+    {
+        value: 3,
+        suffix: "+",
+        label: "Timezone Windows",
+        sublabel: "Gulf · Europe · Asia",
+        description: "Aligned with Gulf, European & Asian business hours"
+    },
 ];
 
-function StatCard({ stat, idx }: { stat: typeof stats[0]; idx: number }) {
+function StatCard({ stat }: { stat: typeof stats[0] }) {
     const { count, ref } = useCountUp(stat.value);
 
     return (
-        <div
-            ref={ref}
-            className="text-center group relative"
-        >
-            {/* Hover glow */}
-            <div className="absolute inset-0 bg-hz-teal/[0.03] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -m-4" />
+        <div ref={ref} className="group relative flex flex-col items-center text-center px-4 py-6">
+            {/* Subtle separator line on hover */}
+            <div className="absolute inset-0 rounded-lg bg-hz-teal/0 group-hover:bg-hz-teal/[0.025] transition-colors duration-500" />
+
             <div className="relative">
-                <div className="text-5xl md:text-6xl font-sora font-extrabold text-hz-text mb-3 tabular-nums tracking-tight">
+                {/* Compact number — was text-5xl/6xl, now text-3xl/4xl */}
+                <div className="font-sora font-extrabold text-3xl md:text-4xl tabular-nums tracking-tight leading-none mb-1 text-hz-text">
                     {count}
                     <span className="text-hz-teal">{stat.suffix}</span>
                 </div>
-                <p className="text-sm font-bold text-hz-text mb-1">{stat.label}</p>
-                <p className="text-xs text-hz-muted font-mono uppercase tracking-wider">{stat.sublabel}</p>
+                <p className="text-sm font-semibold text-hz-text/90 mb-0.5 mt-2">{stat.label}</p>
+                <p className="text-[11px] font-mono uppercase tracking-widest text-hz-muted/70">{stat.sublabel}</p>
             </div>
         </div>
     );
@@ -77,13 +92,13 @@ function StatCard({ stat, idx }: { stat: typeof stats[0]; idx: number }) {
 
 export function StatsSection() {
     return (
-        <section className="py-12 border-y border-hz-border relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-hz-teal/[0.02] via-transparent to-hz-teal/[0.02]" />
-            <div className="max-w-7xl mx-auto px-6 relative">
-                <MotionStagger className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <section className="py-8 border-y border-hz-border bg-hz-card/20 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-hz-teal/[0.015] via-transparent to-hz-teal/[0.015] pointer-events-none" />
+            <div className="max-w-5xl mx-auto px-6 relative">
+                <MotionStagger className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-hz-border/40">
                     {stats.map((stat, idx) => (
                         <MotionItem key={idx}>
-                            <StatCard stat={stat} idx={idx} />
+                            <StatCard stat={stat} />
                         </MotionItem>
                     ))}
                 </MotionStagger>

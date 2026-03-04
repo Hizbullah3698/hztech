@@ -1,72 +1,77 @@
 "use client";
 
 import Link from "next/link";
-import { MotionSection, MotionStagger, MotionItem, fadeUp } from "@/components/ui/Motion";
+import { ArrowRight, RefreshCw } from "lucide-react";
+import { MotionSection, MotionStagger, MotionItem } from "@/components/ui/Motion";
+
+const steps = [
+  {
+    number: "01",
+    title: "Discovery",
+    desc: "Requirements gathering, stakeholder interviews, and technical audit of existing systems.",
+  },
+  {
+    number: "02",
+    title: "Architecture",
+    desc: "Full system architecture, stack selection, DB schema, API contracts, and security model.",
+  },
+  {
+    number: "03",
+    title: "Build & Iterate",
+    desc: "1-week sprints with daily standups aligned to Gulf timezone. Working demo every sprint.",
+  },
+  {
+    number: "04",
+    title: "Handover & SLA",
+    desc: "Full documentation, knowledge transfer, and 6-month post-launch warranty included.",
+  },
+];
 
 export function HowWeWork() {
-  const steps = [
-    {
-      number: "01",
-      title: "Discovery",
-      desc: "Defining project goals, technical constraints, and user needs through intense workshops.",
-    },
-    {
-      number: "02",
-      title: "Architecture",
-      desc: "Designing scalable, secure backend systems and intuitive frontend patterns.",
-    },
-    {
-      number: "03",
-      title: "Build & Iterate",
-      desc: "Rapid agile development cycles with senior lead oversight on every commit.",
-    },
-    {
-      number: "04",
-      title: "Handover & Support",
-      desc: "Documentation, knowledge transfer, and 24/7 post-launch monitoring support.",
-    },
-  ];
-
   return (
-    <section className="py-12 px-6 max-w-7xl mx-auto">
-      <MotionSection className="text-center mb-14">
-        <span className="text-hz-teal text-xs font-bold tracking-[0.3em] font-mono uppercase mb-4 block">
-          Our Process
-        </span>
-        <h2 className="font-sora text-3xl md:text-4xl font-extrabold text-hz-text mb-6">How We Work</h2>
-        <div className="h-1 w-20 bg-gradient-to-r from-hz-teal to-hz-teal/30 mx-auto rounded-full" />
+    <section className="py-14 px-6 max-w-7xl mx-auto border-t border-hz-border/40">
+      <MotionSection className="mb-10">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div>
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-hz-teal text-[10px] font-bold tracking-[0.3em] font-mono uppercase">
+                Our Process
+              </span>
+              {/* Agile badge */}
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-hz-teal/30 bg-hz-teal/5">
+                <RefreshCw className="w-2.5 h-2.5 text-hz-teal" />
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-hz-teal font-bold">
+                  Agile
+                </span>
+              </span>
+            </div>
+            <h2 className="font-sora text-2xl md:text-3xl font-extrabold text-hz-text">How We Work</h2>
+          </div>
+          <Link
+            href="/process"
+            className="text-hz-teal text-sm font-bold flex items-center gap-2 hover:gap-3 transition-all group self-start md:mt-1"
+          >
+            See Full Process <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
       </MotionSection>
 
-      <MotionStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <MotionStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-hz-border/30 rounded-xl overflow-hidden border border-hz-border/30">
         {steps.map((step, i) => (
-          <MotionItem key={i} className="relative group">
-            <div className="relative p-6 rounded-lg border border-transparent hover:border-hz-border hover:bg-hz-card/20 transition-all duration-500">
-              {/* Large background number */}
-              <div className="font-mono text-4xl font-extrabold text-hz-teal/[0.05] absolute top-4 right-5 group-hover:text-hz-teal/[0.08] transition-colors duration-500">
+          <MotionItem key={i}>
+            <div className="relative p-6 bg-hz-primary hover:bg-hz-card/40 transition-colors duration-300 group h-full">
+              {/* Step number — subtle background watermark */}
+              <div className="font-mono text-5xl font-extrabold text-hz-teal/[0.06] absolute top-4 right-4 leading-none select-none group-hover:text-hz-teal/[0.1] transition-colors duration-300">
                 {step.number}
               </div>
-              {/* Teal accent dot */}
-              <div className="w-3 h-3 rounded-full bg-hz-teal/30 group-hover:bg-hz-teal group-hover:shadow-[0_0_12px_rgba(10,191,188,0.4)] transition-all duration-500 mb-6" />
-              <h4 className="text-hz-text font-bold mb-4 text-xl font-sora">{step.title}</h4>
-              <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+              {/* Teal dot indicator */}
+              <div className="w-2 h-2 rounded-full bg-hz-teal/40 group-hover:bg-hz-teal group-hover:shadow-[0_0_8px_rgba(10,191,188,0.5)] transition-all duration-300 mb-4" />
+              <h4 className="text-hz-text font-bold mb-2 text-base font-sora">{step.title}</h4>
+              <p className="text-slate-400 text-xs leading-relaxed">{step.desc}</p>
             </div>
-
-            {/* Connecting line between steps */}
-            {i < steps.length - 1 && (
-              <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-[1px] bg-gradient-to-r from-hz-border to-transparent" />
-            )}
           </MotionItem>
         ))}
       </MotionStagger>
-
-      <MotionSection className="text-center mt-16">
-        <Link
-          href="/process"
-          className="text-hz-teal text-sm font-bold hover:underline underline-offset-4 transition-all"
-        >
-          See Full Process →
-        </Link>
-      </MotionSection>
     </section>
   );
 }

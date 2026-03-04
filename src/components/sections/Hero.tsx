@@ -8,32 +8,28 @@ import {
   MotionStagger,
   MotionItem,
   MotionFloat,
-  MotionParallax,
   fadeIn,
   fadeRight,
-  fadeUp,
   blurIn,
 } from "@/components/ui/Motion";
 
 export function Hero() {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center pt-12 pb-16 overflow-hidden border-b border-white/5 bg-hz-primary">
-      {/* Parallax Background Grid */}
-      <MotionParallax speed={0.3} className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 2px 2px, rgba(10, 191, 188, 0.5) 1px, transparent 0)",
-            backgroundSize: "48px 48px",
-          }}
-        />
-      </MotionParallax>
+      {/* Static dot grid — no scroll listener, no jank */}
+      <div
+        className="absolute inset-0 z-0 opacity-[0.06] pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 2px 2px, rgba(10, 191, 188, 0.5) 1px, transparent 0)",
+          backgroundSize: "48px 48px",
+        }}
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-hz-primary/60 to-hz-primary pointer-events-none z-0" />
 
-      {/* Accent Glows */}
-      <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-hz-teal/[0.04] rounded-full blur-[150px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-hz-teal/[0.03] rounded-full blur-[120px] pointer-events-none" />
+      {/* Accent Glows — static, no animation to keep scroll smooth */}
+      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-hz-teal/[0.04] rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-[350px] h-[350px] bg-hz-teal/[0.03] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 lg:gap-20 items-center py-10">
         {/* Left: Copy */}
@@ -51,31 +47,16 @@ export function Hero() {
           </MotionSection>
 
           <MotionSection delay={0.2}>
-            <h1 className="font-sora text-[2.25rem] md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-7 tracking-tight text-hz-text">
+            <h1 className="font-sora text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-extrabold leading-[1.1] mb-6 tracking-tight text-hz-text">
               Senior-Led Engineering for{" "}
-              <span className="text-hz-teal relative inline-block">
-                Ambitious Tech Teams
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  viewBox="0 0 300 12"
-                  fill="none"
-                >
-                  <path
-                    d="M2 8c50-6 100-6 150 0s100 6 146 0"
-                    stroke="#0ABFBC"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    opacity="0.4"
-                  />
-                </svg>
-              </span>
+              <span className="text-hz-teal">Ambitious Tech Teams</span>
             </h1>
           </MotionSection>
 
           <MotionSection delay={0.35}>
-            <p className="text-lg text-slate-400 mb-10 max-w-lg leading-[1.7]">
+            <p className="text-base text-slate-400 mb-10 max-w-lg leading-[1.7]">
               We build production-grade web, mobile, and automation systems for
-              ambitious software companies across Europe, Middle East, Asia, and the Americas.
+              ambitious software companies worldwide.
             </p>
           </MotionSection>
 
@@ -100,8 +81,8 @@ export function Hero() {
           </MotionSection>
 
           <MotionSection variant={fadeIn} delay={0.65}>
-            <div className="flex flex-wrap gap-6 font-mono text-[10px] text-slate-500 uppercase tracking-[0.15em]">
-              {["NDA-ready in 24hrs", "Senior engineers only", "Full IP ownership"].map(
+            <div className="flex flex-wrap gap-5 font-mono text-[10px] text-slate-500 uppercase tracking-[0.15em]">
+              {["NDA-Ready in 24hrs", "Gulf Timezone Aligned", "Senior Engineers Only"].map(
                 (item, i) => (
                   <span key={i} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-hz-teal/60" />
