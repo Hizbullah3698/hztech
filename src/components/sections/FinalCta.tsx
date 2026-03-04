@@ -8,7 +8,7 @@ export function FinalCta() {
   return (
     <section className="px-6 pb-20">
       <MotionSection variant={scaleIn}>
-        <div className="max-w-7xl mx-auto py-24 px-8 bg-gradient-to-br from-[#0f1118] via-hz-primary to-[#0f1118] border border-hz-border text-center relative overflow-hidden rounded-xl">
+        <div className="max-w-7xl mx-auto py-16 px-6 sm:py-24 sm:px-8 bg-gradient-to-br from-[#0f1118] via-hz-primary to-[#0f1118] border border-hz-border text-center relative overflow-hidden rounded-xl">
           {/* Animated gradient blobs */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-hz-teal/[0.06] rounded-full -translate-y-1/2 translate-x-1/3 blur-[100px] animate-pulse-slow" />
           <div className="absolute bottom-0 left-0 w-60 h-60 bg-hz-teal/[0.04] rounded-full translate-y-1/2 -translate-x-1/3 blur-[80px] animate-pulse-slow" />

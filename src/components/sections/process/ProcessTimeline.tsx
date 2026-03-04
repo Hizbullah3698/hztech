@@ -35,7 +35,7 @@ export function ProcessTimeline() {
                     {/* Center Line for Desktop */}
                     <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-hz-border -translate-x-1/2"></div>
                     {/* Left Line for Mobile */}
-                    <div className="lg:block lg:hidden absolute left-4 top-0 bottom-0 w-px bg-hz-border"></div>
+                    <div className="lg:hidden absolute left-4 top-0 bottom-0 w-px bg-hz-border"></div>
 
                     <div className="space-y-16 lg:space-y-0 relative py-8">
                         {steps.map((step, index) => {

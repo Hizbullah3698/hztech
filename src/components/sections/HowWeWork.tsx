@@ -37,7 +37,7 @@ export function HowWeWork() {
         <div className="h-1 w-20 bg-gradient-to-r from-hz-teal to-hz-teal/30 mx-auto rounded-full" />
       </MotionSection>
 
-      <MotionStagger className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <MotionStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {steps.map((step, i) => (
           <MotionItem key={i} className="relative group">
             <div className="relative p-6 rounded-lg border border-transparent hover:border-hz-border hover:bg-hz-card/20 transition-all duration-500">
@@ -53,7 +53,7 @@ export function HowWeWork() {
 
             {/* Connecting line between steps */}
             {i < steps.length - 1 && (
-              <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-[1px] bg-gradient-to-r from-hz-border to-transparent" />
+              <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-[1px] bg-gradient-to-r from-hz-border to-transparent" />
             )}
           </MotionItem>
         ))}

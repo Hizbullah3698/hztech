@@ -5,8 +5,8 @@ export function Footer() {
   return (
     <footer className="border-t border-hz-border bg-hz-primary py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1 md:col-span-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
             <div className="font-sora text-2xl font-extrabold text-hz-text mb-6">
               <span className="text-hz-teal">HZ</span> Tech
             </div>

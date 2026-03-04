@@ -51,7 +51,8 @@ export function Navbar() {
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-hz-teal"></span>
           </span>
           <span>
-            <strong className="text-hz-text font-bold">Priority Status:</strong> Accepting 1 new Pilot Project for {new Date().toLocaleString('default', { month: 'long' })}
+            <strong className="text-hz-text font-bold">Priority Status:</strong> <span className="hidden sm:inline">Accepting 1 new Pilot Project for {new Date().toLocaleString('default', { month: 'long' })}</span>
+            <span className="sm:hidden"> 1 New Slot Open</span>
           </span>
           <span className="hidden sm:inline-block ml-2 text-hz-teal font-bold group-hover:translate-x-1 transition-transform">
             → Book Strategy Call
