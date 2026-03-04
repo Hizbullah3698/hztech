@@ -1,13 +1,13 @@
-import { Check, X } from 'lucide-react';
+import { Check, X, Terminal, GitBranch, Database, ArrowRight } from 'lucide-react';
 
 export function CaseStudyDetails() {
     return (
-        <section className="py-12 bg-hz-primary border-t border-hz-border">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+        <section className="py-8 sm:py-12 bg-hz-primary border-t border-hz-border">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
 
                     {/* Left Column: Context & Problem */}
-                    <div className="lg:col-span-5 space-y-16">
+                    <div className="lg:col-span-5 space-y-8 lg:space-y-16">
                         <div>
                             <h3 className="font-mono text-xs font-bold tracking-[0.2em] text-hz-teal uppercase mb-4">
                                 Client Context
@@ -66,7 +66,7 @@ export function CaseStudyDetails() {
 
                     {/* Right Column: Solution & Architecture */}
                     <div className="lg:col-span-7">
-                        <div className="bg-hz-card border border-hz-border rounded-sm p-8 md:p-12 h-full flex flex-col shadow-lg shadow-black/20">
+                        <div className="bg-hz-card border border-hz-border rounded-sm p-5 sm:p-8 md:p-10 h-full flex flex-col shadow-lg shadow-black/20">
 
                             <h3 className="font-mono text-xs font-bold tracking-[0.2em] text-hz-teal uppercase mb-8">
                                 Architecture Overview
@@ -74,25 +74,25 @@ export function CaseStudyDetails() {
 
                             <div className="space-y-4 mb-16 flex-grow">
                                 <div className="bg-hz-primary border border-hz-border p-4 rounded flex items-center justify-between group">
-                                    <div className="flex items-center gap-4">
-                                        <span className="material-symbols-outlined text-hz-teal text-xl">terminal</span>
+                                    <div className="flex items-center gap-3">
+                                        <Terminal className="w-5 h-5 text-hz-teal flex-shrink-0" />
                                         <span className="font-mono text-sm font-bold text-hz-text tracking-widest">PLAYWRIGHT ENGINE</span>
                                     </div>
-                                    <span className="material-symbols-outlined text-hz-muted group-hover:text-hz-teal transition-colors">arrow_forward</span>
+                                    <ArrowRight className="w-4 h-4 text-hz-muted group-hover:text-hz-teal transition-colors flex-shrink-0" />
                                 </div>
                                 <div className="bg-hz-primary border border-hz-border p-4 rounded flex items-center justify-between group">
-                                    <div className="flex items-center gap-4">
-                                        <span className="material-symbols-outlined text-hz-teal text-xl">account_tree</span>
+                                    <div className="flex items-center gap-3">
+                                        <GitBranch className="w-5 h-5 text-hz-teal flex-shrink-0" />
                                         <span className="font-mono text-sm font-bold text-hz-text tracking-widest">DATA PARSER</span>
                                     </div>
-                                    <span className="material-symbols-outlined text-hz-muted group-hover:text-hz-teal transition-colors">arrow_forward</span>
+                                    <ArrowRight className="w-4 h-4 text-hz-muted group-hover:text-hz-teal transition-colors flex-shrink-0" />
                                 </div>
                                 <div className="bg-hz-primary border border-hz-border p-4 rounded flex items-center justify-between group">
-                                    <div className="flex items-center gap-4">
-                                        <span className="material-symbols-outlined text-hz-teal text-xl">database</span>
+                                    <div className="flex items-center gap-3">
+                                        <Database className="w-5 h-5 text-hz-teal flex-shrink-0" />
                                         <span className="font-mono text-sm font-bold text-hz-text tracking-widest">SQLITE DATABASE</span>
                                     </div>
-                                    <span className="material-symbols-outlined text-hz-muted group-hover:text-hz-teal transition-colors">arrow_forward</span>
+                                    <ArrowRight className="w-4 h-4 text-hz-muted group-hover:text-hz-teal transition-colors flex-shrink-0" />
                                 </div>
                                 <div className="bg-hz-teal/10 border border-hz-teal/30 p-4 rounded flex items-center gap-4 mt-6">
                                     <div className="w-6 h-6 rounded bg-hz-teal/20 flex items-center justify-center shrink-0">

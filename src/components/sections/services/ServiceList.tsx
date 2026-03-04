@@ -8,7 +8,7 @@ export function ServiceList() {
             {services.map((service, idx) => {
                 const Icon = service.icon;
                 return (
-                    <Link href={`/services/${service.slug}`} key={idx} className="block py-12 hover:bg-hz-teal/[0.02] transition-colors group cursor-pointer relative">
+                    <Link href={`/services/${service.slug}`} key={idx} className="block py-8 sm:py-10 lg:py-12 hover:bg-hz-teal/[0.02] transition-colors group cursor-pointer relative">
                         <div className="absolute top-1/2 -translate-y-1/2 right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 hidden lg:block">
                             <div className="bg-hz-teal/10 p-3 rounded-full border border-hz-teal/20">
                                 <ArrowRight className="w-6 h-6 text-hz-teal" />
@@ -61,17 +61,17 @@ export function ServiceList() {
                             </div>
 
                             {/* Bottom (Timeline, Governance) */}
-                            <div className="mt-12 pt-8 border-t border-hz-border flex flex-wrap gap-8 text-[11px] uppercase tracking-[0.2em] font-bold text-slate-500 font-mono items-center">
+                            <div className="mt-6 pt-5 border-t border-hz-border flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-6 text-[10px] uppercase tracking-[0.1em] font-bold text-slate-500 font-mono">
                                 <div className="flex items-center gap-2">
-                                    <Clock className="w-4 h-4 text-hz-muted" />
-                                    Timeline: {service.timeline}
+                                    <Clock className="w-3.5 h-3.5 text-hz-muted flex-shrink-0" />
+                                    <span>Timeline: {service.timeline}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <ShieldCheck className="w-4 h-4 text-hz-muted" />
-                                    Governance: {service.governance}
+                                    <ShieldCheck className="w-3.5 h-3.5 text-hz-muted flex-shrink-0" />
+                                    <span>Governance: {service.governance}</span>
                                 </div>
-                                <div className="lg:hidden ml-auto flex items-center gap-2 text-hz-teal group-hover:translate-x-1 transition-transform">
-                                    View Details <ArrowRight className="w-4 h-4" />
+                                <div className="sm:ml-auto flex items-center gap-2 text-hz-teal group-hover:translate-x-1 transition-transform lg:hidden">
+                                    View Details <ArrowRight className="w-3.5 h-3.5" />
                                 </div>
                             </div>
                         </div>
